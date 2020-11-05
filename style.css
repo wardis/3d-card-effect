@@ -55,8 +55,17 @@ body {
   z-index: 1;
 }
 
+.info .title,
+.info h3,
+.sizes,
+.sneaker img,
+.purchase button {
+  transition: all 0.75s ease-out;
+}
+
 .info .title {
   font-size: 2rem;
+  /* transition: all 0.75 ease-out; */
 }
 .info h3 {
   font-size: 0.9rem;
