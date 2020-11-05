@@ -1,4 +1,6 @@
-* {
+*,
+:before,
+:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,7 +15,6 @@ body {
 }
 
 .container {
-  /* background-color: lightblue; */
   width: 50%;
   display: flex;
   justify-content: center;
@@ -21,28 +22,26 @@ body {
 }
 
 .card {
-  min-height: 80vh;
-  width: 35rem;
-  border-radius: 30px;
-  padding: 0rem 5rem;
-  /* background-color: lightcoral; */
+  width: 24rem;
+  border-radius: 10px;
+  padding: 0 3rem 3rem;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0px 50px rgba(0, 0, 0, 0.2);
 }
 
 .sneaker {
-  min-height: 35vh;
+  min-height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .sneaker img {
-  width: 20rem;
+  width: 18rem;
   z-index: 2;
 }
 
 .circle {
-  width: 15rem;
-  height: 15rem;
+  width: 14rem;
+  height: 14rem;
   background: linear-gradient(
     to right,
     rgba(245, 70, 66, 0.75),
@@ -51,4 +50,72 @@ body {
   position: absolute;
   border-radius: 50%;
   z-index: 1;
+}
+
+.info .title {
+  font-size: 2rem;
+}
+.info h3 {
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0.5rem 0 2rem;
+  color: #585858;
+  font-weight: lighter;
+}
+
+.sizes {
+  display: flex;
+  justify-content: space-between;
+}
+.sizes button {
+  padding: 0.5rem 1.5rem;
+  background: none;
+  border: none;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+  /* border-radius: 2px; */
+  cursor: pointer;
+  font-weight: bold;
+  color: #585858;
+}
+.sizes button.active {
+  background: #585858;
+  color: white;
+}
+
+.purchase {
+  margin-top: 2rem;
+}
+.purchase button {
+  width: 100%;
+  padding: 1rem 0;
+  background: #f54642;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.purchase button:before,
+.purchase button:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+.purchase button:before {
+  border-bottom: 1px solid #f54642;
+  border-left: 1px solid #f54642;
+  bottom: -3px;
+  height: 3px;
+  left: 3px;
+  width: 100%;
+}
+.purchase button:after {
+  border-right: 1px solid #f54642;
+  border-top: 1px solid #f54642;
+  height: 100%;
+  right: -3px;
+  top: 3px;
+  width: 3px;
 }
